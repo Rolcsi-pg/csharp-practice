@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace buborekrendezes
+{
+    internal class Program
+    {
+        static int[] BuborekRendezes(int[] tomb)
+        {
+            for (int i = tomb.Length-1; i >= 0; i--)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    if (tomb[i] < tomb[j])
+                    {
+                        int tmp = tomb[i];
+                        tomb[i] = tomb[j];
+                        tomb[j] = tmp;
+                    }
+                }
+            }
+
+            return tomb;
+        }
+        static void Main(string[] args)
+        {
+            int[] szamok = { 12, 5, 612, 45, 12, 6154, 87, 3, 8, 2, 341, 53, 22, 35, 105 };
+            BuborekRendezes(szamok);
+
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
