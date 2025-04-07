@@ -1,4 +1,4 @@
-var kapcsolodas = new MySqlConnectionStringBuilder { Server = "127.0.0.1", Database = "cukraszda", UserID = "root", Password = "" };
+var kapcsolodas = new MySqlConnectionStringBuilder { Server = "127.0.0.1", Database = "", UserID = "root", Password = "" };
 var kapcsolat = new MySqlConnection(kapcsolodas.ConnectionString);
 kapcsolat.Open();
 var lekerdezesek = kapcsolat.CreateCommand();
